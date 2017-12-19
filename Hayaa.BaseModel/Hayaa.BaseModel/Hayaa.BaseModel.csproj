@@ -13,10 +13,4 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Reference Include="Gridsum.Common.QueryIntegration">
-      <HintPath>C:\Users\windwolf\Downloads\Gridsum.Common.QueryIntegration.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
