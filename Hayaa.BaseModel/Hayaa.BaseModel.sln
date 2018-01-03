@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hayaa.BaseModel", "Hayaa.BaseModel\Hayaa.BaseModel.csproj", "{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hayaa.BaseModel", "Hayaa.BaseModel\Hayaa.BaseModel.csproj", "{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hayaa.Common", "Hayaa.Common\Hayaa.Common.csproj", "{4CB77FA9-F37E-4D21-B078-A656465D13E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CB77FA9-F37E-4D21-B078-A656465D13E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CB77FA9-F37E-4D21-B078-A656465D13E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CB77FA9-F37E-4D21-B078-A656465D13E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CB77FA9-F37E-4D21-B078-A656465D13E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
