@@ -9,6 +9,14 @@ namespace Hayaa.BaseModel
     /// </summary>
    public class BaseFunctionResult
     {
+        public BaseFunctionResult()
+        {
+            this.ActionResult = true;
+        }
+        public BaseFunctionResult(bool actionResult)
+        {
+            this.ActionResult = actionResult;
+        }
         /// <summary>
         /// 函数执行过程true表示正常，false表示有异常
         /// </summary>
