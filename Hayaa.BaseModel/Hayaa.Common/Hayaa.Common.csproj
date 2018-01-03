@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>hayaaAI</Authors>
+    <Company>hayaa</Company>
+    <Product>hayaaAI</Product>
+    <Copyright>©2018 HayaaAI</Copyright>
+    <PackageLicenseUrl>http://l.xieqj.net/license/hayaaai.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/hayaaAI/BaseModel</PackageProjectUrl>
+    <PackageIconUrl>http://r.xieqj.net/r/ico/hayaaia.ico</PackageIconUrl>
   </PropertyGroup>
 
 </Project>
