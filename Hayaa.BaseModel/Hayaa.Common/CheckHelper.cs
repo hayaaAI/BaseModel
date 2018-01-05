@@ -34,6 +34,14 @@ namespace Hayaa.Common
             }
             return true;
         }
+        public static bool AssertRangByte(byte target, byte min, byte max)
+        {
+            if ((target < min) || (target > max))
+            {
+                return false;
+            }
+            return true;
+        }
         public static bool AssertRangInt(int target,int min,int max) 
         {
             if ((target < min) || (target > max))
@@ -59,6 +67,22 @@ namespace Hayaa.Common
             return true;
         }
         public static bool AssertRangDouble(double target, double min, double max)
+        {
+            if ((target < min) || (target > max))
+            {
+                return false;
+            }
+            return true;
+        }
+        public static bool AssertRangFloat(float target, float min, float max)
+        {
+            if ((target < min) || (target > max))
+            {
+                return false;
+            }
+            return true;
+        }
+        public static bool AssertRangDateTime(DateTime target, DateTime min, DateTime max)
         {
             if ((target < min) || (target > max))
             {
@@ -163,6 +187,20 @@ namespace Hayaa.Common
             }
             target = target.Trim();
             if (!ChineseRegex.IsMatch(target))
+            {
+                return false;
+            }
+            return true;
+        }
+        public static bool AssertRegex(string target, String regexRule)
+        {
+            if (string.IsNullOrWhiteSpace(target))
+            {
+                return false;
+            }
+            target = target.Trim();
+            Regex regex = new Regex(regexRule, RegexOptions.Compiled);
+            if (!regex.IsMatch(target))
             {
                 return false;
             }

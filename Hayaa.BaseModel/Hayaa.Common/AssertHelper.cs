@@ -31,32 +31,53 @@ namespace Hayaa.Common
                 throw new Exception("变量为null");
             }           
         }
+        public static void AssertRangByte(byte target, byte min, byte max)
+        {
+            if ((target < min) || (target > max))
+            {
+                throw new Exception("byte变量数值超出约束范围");
+            }
+        }
         public static void AssertRangInt(int target,int min,int max) 
         {
             if ((target < min) || (target > max))
             {
-                throw new Exception("变量数值超出约束范围");
+                throw new Exception("int变量数值超出约束范围");
             }
         }
         public static void AssertRangLong(long target, long min, long max)
         {
             if ((target < min) || (target > max))
             {
-                throw new Exception("变量数值超出约束范围");
+                throw new Exception("long变量数值超出约束范围");
             }
         }
         public static void AssertRangDecimal(decimal target, decimal min, decimal max)
         {
             if ((target < min) || (target > max))
             {
-                throw new Exception("变量数值超出约束范围");
+                throw new Exception("decimal变量数值超出约束范围");
             }
         }
         public static void AssertRangDouble(double target, double min, double max)
         {
             if ((target < min) || (target > max))
             {
-                throw new Exception("变量数值超出约束范围");
+                throw new Exception("double变量数值超出约束范围");
+            }
+        }
+        public static void AssertRangFloat(float target, float min, float max)
+        {
+            if ((target < min) || (target > max))
+            {
+                throw new Exception("float变量数值超出约束范围");
+            }
+        }
+        public static void AssertRangDateTime(DateTime target, DateTime min, DateTime max)
+        {
+            if ((target < min) || (target > max))
+            {
+                throw new Exception("DateTime变量数值超出约束范围");
             }
         }
         private static readonly Regex MobileRegex = new Regex(RegexRuleHelper.Mobile, RegexOptions.Compiled);
@@ -153,6 +174,19 @@ namespace Hayaa.Common
             if (!ChineseRegex.IsMatch(target))
             {
                 throw new Exception("不包含中文");
+            }
+        }
+        public static void AssertRegex(string target,String regexRule)
+        {
+            if (string.IsNullOrWhiteSpace(target))
+            {
+                throw new Exception("变量为空");
+            }
+            target = target.Trim();
+            Regex regex = new Regex(regexRule, RegexOptions.Compiled);
+            if (!regex.IsMatch(target))
+            {
+                throw new Exception("不符合正则规则");
             }
         }
     }
