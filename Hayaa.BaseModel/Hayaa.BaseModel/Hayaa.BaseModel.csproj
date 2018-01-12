@@ -14,8 +14,9 @@
     <PackageTags>BaseModel</PackageTags>
     <AssemblyVersion>1.0.0.2</AssemblyVersion>
     <FileVersion>1.0.0.2</FileVersion>
-    <PackageReleaseNotes>业务约束基础类库</PackageReleaseNotes>
+    <PackageReleaseNotes></PackageReleaseNotes>
     <Version>1.0.0.2</Version>
+    <Description>业务约束基础类库</Description>
   </PropertyGroup>
 
 </Project>

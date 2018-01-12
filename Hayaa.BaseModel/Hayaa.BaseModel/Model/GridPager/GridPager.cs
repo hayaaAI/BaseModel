@@ -7,7 +7,7 @@ namespace Hayaa.BaseModel
     /// <summary>
     /// 分页数据容器类,2147483647数据量内使用此类
     /// </summary>
-    public class GridPager<T>: FunctionResult<T> where T:BaseData
+    public class GridPager<T>: FunctionListResult<T> where T:BaseData
     {
         /// <summary>
         /// 当前指向数据页
@@ -18,9 +18,9 @@ namespace Hayaa.BaseModel
         /// </summary>
         public int PageSize { set; get; }
         /// <summary>
-        /// 总页数
+        ///数据总量
         /// </summary>
-        public int PageTotal { set; get; }
+        public int Total { set; get; }
        
     }
 }

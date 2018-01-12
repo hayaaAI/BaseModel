@@ -11,11 +11,16 @@
     <PackageLicenseUrl>http://l.xieqj.net/license/hayaaai.txt</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/hayaaAI/BaseModel</PackageProjectUrl>
     <PackageIconUrl>http://r.xieqj.net/r/ico/hayaaia.ico</PackageIconUrl>
-    <Description>工具方法组件</Description>
+    <Description>关系数据库通道组件</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="Dapper" Version="1.50.4" />
+    <PackageReference Include="MySql.Data" Version="6.10.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hayaa.BaseModel\Hayaa.BaseModel.csproj" />
   </ItemGroup>
 
 </Project>
