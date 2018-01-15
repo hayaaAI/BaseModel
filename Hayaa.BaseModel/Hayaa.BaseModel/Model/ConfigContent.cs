@@ -9,9 +9,9 @@ namespace Hayaa.BaseModel
     /// </summary>
     public interface ConfigContent
     {
-         AppSettings appSettings { set; get; }
+         AppSettings AppSettings { set; get; }
 
-         ConnectionStrings connectionStrings { set; get; }
+         ConnectionStrings ConnectionStrings { set; get; }
     }
     [Serializable]
     public class AppSettings
@@ -35,7 +35,7 @@ namespace Hayaa.BaseModel
         public class ConnectionInfo
         {
 
-            public string Key { set; get; }
+            public string Name { set; get; }
 
             public string Connection { set; get; }
         }
