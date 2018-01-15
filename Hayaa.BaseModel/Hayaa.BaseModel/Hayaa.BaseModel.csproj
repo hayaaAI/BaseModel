@@ -15,7 +15,7 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <Version>1.0.0.4</Version>
+    <Version>1.0.0.5</Version>
     <Description>业务约束基础类库</Description>
   </PropertyGroup>
 
