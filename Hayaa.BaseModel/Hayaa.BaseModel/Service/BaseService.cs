@@ -23,7 +23,7 @@ namespace Hayaa.BaseModel.Service
         /// </summary>
         /// <param name="ID"></param>
         /// <returns></returns>
-        FunctionOpenResult<bool> DeleteByID(int ID);
+        FunctionOpenResult<bool> DeleteByID(List<int> idList);
         /// <summary>
         /// 分页获取
         /// </summary>
