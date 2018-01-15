@@ -7,7 +7,8 @@ namespace Hayaa.BaseModel
     /// <summary>
     /// 函数执行过程结果类
     /// </summary>
-   public class BaseFunctionResult
+    [Serializable]
+    public class BaseFunctionResult
     {
         public BaseFunctionResult()
         {

@@ -8,6 +8,7 @@ namespace Hayaa.BaseModel
     /// 大数据分页参数
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    [Serializable]
     public class BigGridPagerPamater<T> where T:class,new() 
     {
         /// <summary>

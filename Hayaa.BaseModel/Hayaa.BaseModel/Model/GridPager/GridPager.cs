@@ -7,6 +7,7 @@ namespace Hayaa.BaseModel
     /// <summary>
     /// 分页数据容器类,2147483647数据量内使用此类
     /// </summary>
+    [Serializable]
     public class GridPager<T>: FunctionListResult<T> where T:BaseData
     {
         /// <summary>

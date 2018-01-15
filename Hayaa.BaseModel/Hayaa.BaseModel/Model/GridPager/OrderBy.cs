@@ -7,7 +7,8 @@ namespace Hayaa.BaseModel
     /// <summary>
     /// 排序元数据
     /// </summary>
-   public class OrderBy
+    [Serializable]
+    public class OrderBy
     {
         /// <summary>
         /// 数据要排序属性名称

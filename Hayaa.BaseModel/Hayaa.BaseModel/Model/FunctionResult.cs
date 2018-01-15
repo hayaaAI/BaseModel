@@ -6,6 +6,7 @@ namespace Hayaa.BaseModel
     /// 函数执行结果容器
     /// </summary>
     /// <typeparam name="T">业务数据模型类</typeparam>
+    [Serializable]
     public class FunctionResult<T>:BaseFunctionResult where T:BaseData
     {
         public FunctionResult():base()
