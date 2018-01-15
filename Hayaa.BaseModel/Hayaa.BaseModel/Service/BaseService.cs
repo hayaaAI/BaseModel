@@ -17,13 +17,13 @@ namespace Hayaa.BaseModel.Service
         /// </summary>
         /// <param name="info"></param>
         /// <returns></returns>
-        BaseFunctionResult UpdateByID(T info);
+        FunctionOpenResult<bool> UpdateByID(T info);
         /// <summary>
         /// 根据主键删除
         /// </summary>
         /// <param name="ID"></param>
         /// <returns></returns>
-        BaseFunctionResult DeleteByID(int ID);
+        FunctionOpenResult<bool> DeleteByID(int ID);
         /// <summary>
         /// 分页获取
         /// </summary>
