@@ -51,5 +51,36 @@ namespace Hayaa.Common
             }
             return responseData;
         }
+        /// <summary>
+        /// 以body形式发送json数据
+        /// </summary>
+        /// <param name="JSONData"></param>
+        /// <param name="Url"></param>
+        /// <returns></returns>
+        public static string PostJson(string JSONData, string Url)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(JSONData);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
+            request.Method = "POST";
+            request.ContentLength = bytes.Length;
+            request.ContentType = "text/xml";
+            Stream reqstream = request.GetRequestStream();
+            reqstream.Write(bytes, 0, bytes.Length);
+
+            //声明一个HttpWebRequest请求  
+            request.Timeout = 90000;
+            //设置连接超时时间  
+            request.Headers.Set("Pragma", "no-cache");
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            Stream streamReceive = response.GetResponseStream();
+            Encoding encoding = Encoding.UTF8;
+
+            StreamReader streamReader = new StreamReader(streamReceive, encoding);
+            string strResult = streamReader.ReadToEnd();
+            streamReceive.Dispose();
+            streamReader.Dispose();
+
+            return strResult;
+        }
     }
 }
