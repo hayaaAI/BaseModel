@@ -57,18 +57,18 @@ namespace Hayaa.Common
         /// <param name="JSONData"></param>
         /// <param name="Url"></param>
         /// <returns></returns>
-        public static string PostJson(string JSONData, string Url)
+        public static string PostJson(string JSONData, string Url,int timeout=60000)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(JSONData);
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
             request.Method = "POST";
             request.ContentLength = bytes.Length;
-            request.ContentType = "text/xml";
+            request.ContentType = "application/json; charset=utf-8";
             Stream reqstream = request.GetRequestStream();
             reqstream.Write(bytes, 0, bytes.Length);
 
             //声明一个HttpWebRequest请求  
-            request.Timeout = 90000;
+            request.Timeout = timeout;
             //设置连接超时时间  
             request.Headers.Set("Pragma", "no-cache");
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
