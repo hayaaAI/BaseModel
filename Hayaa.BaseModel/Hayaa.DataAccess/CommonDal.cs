@@ -9,27 +9,27 @@ namespace Hayaa.DataAccess
 {
     public class CommonDal
     {
-        internal static int Update<T>(String conectionString,string sql, T data)
+        protected static int Update<T>(String conectionString,string sql, T data)
         {
             IDbConnection conn = new MySqlConnection(conectionString);
             return conn.Execute(sql, data);
         }
-        internal static int Excute(String conectionString,string sql, object parama = null)
+        protected static int Excute(String conectionString,string sql, object parama = null)
         {
             IDbConnection conn = new MySqlConnection(conectionString);
             return conn.Execute(sql, parama);
         }
-        internal static List<T> GetList<T>(String conectionString,string sql, object parama)
+        protected static List<T> GetList<T>(String conectionString,string sql, object parama)
         {
             IDbConnection conn = new MySqlConnection(conectionString);
             return conn.Query<T>(sql, parama).AsList<T>();
         }
-        internal static T Get<T>(String conectionString,string sql, object parama)
+        protected static T Get<T>(String conectionString,string sql, object parama)
         {
             IDbConnection conn = new MySqlConnection(conectionString);
             return conn.QuerySingle<T>(sql, parama);
         }
-        internal static GridPager<T> GetGridPager<T>(String conectionString,string sql, int pageSize, int pageIndex, object parama) where T: BaseData
+        protected static GridPager<T> GetGridPager<T>(String conectionString,string sql, int pageSize, int pageIndex, object parama) where T: BaseData
         {
             GridPager<T> r = new GridPager<T>() { CurrentIndex = pageIndex, PageSize = pageSize, ActionResult = false };
             IDbConnection conn = new MySqlConnection(conectionString);
