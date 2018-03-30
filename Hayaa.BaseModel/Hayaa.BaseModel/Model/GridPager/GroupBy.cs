@@ -7,7 +7,8 @@ namespace Hayaa.BaseModel
     /// <summary>
     /// 分组元数据
     /// </summary>
-  public  class GroupBy
+    [Serializable]
+    public  class GroupBy
     {
         /// <summary>
         /// 分组名称

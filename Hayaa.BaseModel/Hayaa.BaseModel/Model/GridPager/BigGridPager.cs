@@ -7,7 +7,8 @@ namespace Hayaa.BaseModel
     /// <summary>
     /// 大数据分页数据容器类
     /// </summary>
-  public  class BigGridPager<T>: FunctionResult<T> where T:BaseData
+    [Serializable]
+    public  class BigGridPager<T>: FunctionResult<T> where T:BaseData
     {
         /// <summary>
         /// 当前指向数据页
