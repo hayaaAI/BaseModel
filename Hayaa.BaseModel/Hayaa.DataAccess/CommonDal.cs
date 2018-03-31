@@ -9,6 +9,11 @@ namespace Hayaa.DataAccess
 {
     public class CommonDal
     {
+        protected static int Insert<T>(String conectionString, string sql, T data)
+        {
+            IDbConnection conn = new MySqlConnection(conectionString);
+            return conn.Execute(sql, data);
+        }
         protected static int Update<T>(String conectionString,string sql, T data)
         {
             IDbConnection conn = new MySqlConnection(conectionString);
