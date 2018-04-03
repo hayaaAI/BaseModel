@@ -29,6 +29,6 @@ namespace Hayaa.BaseModel.Service
         /// </summary>
         /// <param name="searchParam"></param>
         /// <returns></returns>
-        GridPager<T> GetPager(GridPagerPamater<GRIDPAMATER> searchParam);
+        GridPager<T> GetPager(GridPagerPamater<SEARCHPAMATER> searchParam);
     }
 }
