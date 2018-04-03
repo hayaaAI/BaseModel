@@ -16,6 +16,11 @@ namespace Hayaa.DataAccess
             IDbConnection conn = new MySqlConnection(conectionString);
             return conn.Execute(sql, data);
         }
+        protected static TReturnID InsertWithReturnID<T, TReturnID>(String conectionString, string sql, T data) 
+        {
+            IDbConnection conn = new MySqlConnection(conectionString);
+            return conn.QuerySingle<TReturnID>(sql, data);
+        }
         protected static int Update<T>(String conectionString, string sql, T data)
         {
             IDbConnection conn = new MySqlConnection(conectionString);

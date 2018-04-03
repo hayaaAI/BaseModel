@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hayaa.BaseModel.Service
 {
-  public  interface IBaseService<T,GRIDPAMATER> where T: BaseData where GRIDPAMATER:class,new()
+  public  interface IBaseService<T,SEARCHPAMATER> where T: BaseData where SEARCHPAMATER : class,new()
     {
         /// <summary>
         /// 创建数据
