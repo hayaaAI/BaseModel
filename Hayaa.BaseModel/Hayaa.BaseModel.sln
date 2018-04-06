@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hayaa.BaseModel", "Hayaa.BaseModel\Hayaa.BaseModel.csproj", "{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hayaa.Common", "Hayaa.Common\Hayaa.Common.csproj", "{4CB77FA9-F37E-4D21-B078-A656465D13E2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compent", "Compent", "{6D5C8D78-FE8E-47C3-B26C-406F9C988242}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hayaa.DataAccess", "Hayaa.DataAccess\Hayaa.DataAccess.csproj", "{BD361998-E8D2-4C30-9A1E-934836687242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hayaa.DataAccess", "Hayaa.DataAccess\Hayaa.DataAccess.csproj", "{BD361998-E8D2-4C30-9A1E-934836687242}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hayaa.BaseModel", "Hayaa.BaseModel\Hayaa.BaseModel.csproj", "{AB29BBF1-E507-4B73-8067-E647A1BEBEEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hayaa.Common", "Hayaa.Common\Hayaa.Common.csproj", "{0E722D17-FE5B-4C0A-AF12-F7293DE7BADE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{9FCE71EF-0E87-43EC-8E02-B19452746F5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,18 +19,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1D27E070-E48E-4A8A-8F31-5829FBFE2D1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4CB77FA9-F37E-4D21-B078-A656465D13E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4CB77FA9-F37E-4D21-B078-A656465D13E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4CB77FA9-F37E-4D21-B078-A656465D13E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4CB77FA9-F37E-4D21-B078-A656465D13E2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BD361998-E8D2-4C30-9A1E-934836687242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BD361998-E8D2-4C30-9A1E-934836687242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD361998-E8D2-4C30-9A1E-934836687242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD361998-E8D2-4C30-9A1E-934836687242}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB29BBF1-E507-4B73-8067-E647A1BEBEEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB29BBF1-E507-4B73-8067-E647A1BEBEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB29BBF1-E507-4B73-8067-E647A1BEBEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB29BBF1-E507-4B73-8067-E647A1BEBEEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E722D17-FE5B-4C0A-AF12-F7293DE7BADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E722D17-FE5B-4C0A-AF12-F7293DE7BADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E722D17-FE5B-4C0A-AF12-F7293DE7BADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E722D17-FE5B-4C0A-AF12-F7293DE7BADE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Hayaa.BaseModel\Hayaa.BaseModel.csproj" />
+    <ProjectReference Include="..\Hayaa.Common\Hayaa.Common.csproj" />
   </ItemGroup>
 
 </Project>

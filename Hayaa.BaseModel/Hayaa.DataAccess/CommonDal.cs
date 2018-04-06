@@ -49,7 +49,8 @@ namespace Hayaa.DataAccess
             if (!multi.IsConsumed)
             {
                 r.Data = multi.Read<T>().AsList<T>();
-                r.Total = multi.ReadSingle();
+                r.Total = multi.ReadSingle<int>();
+                r.ActionResult = true;
             }
             return r;
         }
