@@ -19,9 +19,11 @@ namespace Hayaa.BaseModel
             List<MethodInfo> methods=type.GetMethods().ToList();
             List<String> list = new List<string>();
             listPinfo.ForEach(pi => {
+                if (pi != null) { 
                 String methodName = String.Format("Get{0}Sql",pi.Name);
                 MethodInfo method = methods.Find(a => a.Name == methodName);
                 list.Add(method.Invoke(type, null).ToString());
+                }
             });
             if (list.Count > 0)
                 return String.Format("where {0}", String.Join(" and ", list));
