@@ -7,6 +7,7 @@ namespace Hayaa.BaseModel
     /// <summary>
     /// 数据排序枚举
     /// </summary>
+    [Serializable]
     public enum OrderDirection
     {
         /// <summary>

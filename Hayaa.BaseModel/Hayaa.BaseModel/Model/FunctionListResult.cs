@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Hayaa.BaseModel
 {
@@ -7,26 +8,26 @@ namespace Hayaa.BaseModel
     /// </summary>
     /// <typeparam name="T">业务数据模型类</typeparam>
     [Serializable]
-    public class FunctionResult<T>:BaseFunctionResult where T:BaseData
+    public class FunctionListResult<T> : BaseFunctionResult where T : BaseData
     {
-        public FunctionResult():base()
+        public FunctionListResult() : base()
         {
 
         }
-        public FunctionResult(bool actionResult) : base(actionResult)
+        public FunctionListResult(bool actionResult) : base(actionResult)
         {
 
         }
-        private T g_data;
+        private List<T> g_data;
         /// <summary>
         /// 函数执行返回结果:数据、业务码、业务返回信息
         /// </summary>
-        public  T Data
+        public List<T> Data
         {
             set
             {
                 g_data = value;
-                if (g_data != null) 
+                if ((g_data!= null) || (g_data.Count>0))
                 {
                     this.HavingData = true;
                 }

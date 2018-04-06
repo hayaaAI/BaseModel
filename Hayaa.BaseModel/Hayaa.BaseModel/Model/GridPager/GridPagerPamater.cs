@@ -8,6 +8,7 @@ namespace Hayaa.BaseModel
     /// 分页参数,2147483647数据量内使用此类
     /// </summary>
     /// <typeparam name="T"></typeparam>
+    [Serializable]
     public class GridPagerPamater<T> where T : class, new()
     {
         /// <summary>

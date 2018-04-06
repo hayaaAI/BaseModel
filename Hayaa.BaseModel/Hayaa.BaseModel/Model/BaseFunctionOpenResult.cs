@@ -8,22 +8,15 @@ namespace Hayaa.BaseModel
     /// 函数执行过程结果类
     /// </summary>
     [Serializable]
-    public class BaseFunctionResult
+    public class BaseFunctionOpenResult
     {
-        public BaseFunctionResult()
+        public BaseFunctionOpenResult()
         {
-            this.ActionResult = true;
-            this.HavingData = false;
+            this.ActionResult = true;           
         }
-        public BaseFunctionResult(bool actionResult,bool havingData=false)
+        public BaseFunctionOpenResult(bool actionResult)
         {
-            this.ActionResult = actionResult;
-            this.HavingData = havingData;
-            if (!actionResult)
-            {
-                this.HavingData = false;
-            }
-           
+            this.ActionResult = actionResult;          
         }
         /// <summary>
         /// 函数执行过程true表示正常，false表示有异常
@@ -37,9 +30,6 @@ namespace Hayaa.BaseModel
         /// 函数执行异常返回信息
         /// </summary>
         public string ErrorMsg { set; get; }
-        /// <summary>
-        /// 是否有数据,true表示有数据false表示没有
-        /// </summary>
-        public bool HavingData { set; get; }
+       
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hayaa.BaseModel.Service
 {
-  public  interface IBaseService<T,GRIDPAMATER> where T: BaseData where GRIDPAMATER:class,new()
+  public  interface IBaseService<T,SEARCHPAMATER> where T: BaseData where SEARCHPAMATER : class,new()
     {
         /// <summary>
         /// 创建数据
@@ -17,18 +17,18 @@ namespace Hayaa.BaseModel.Service
         /// </summary>
         /// <param name="info"></param>
         /// <returns></returns>
-        BaseFunctionResult UpdateByID(T info);
+        FunctionOpenResult<bool> UpdateByID(T info);
         /// <summary>
         /// 根据主键删除
         /// </summary>
         /// <param name="ID"></param>
         /// <returns></returns>
-        BaseFunctionResult DeleteByID(int ID);
+        FunctionOpenResult<bool> DeleteByID(List<int> idList);
         /// <summary>
         /// 分页获取
         /// </summary>
         /// <param name="searchParam"></param>
         /// <returns></returns>
-        GridPager<T> GetPager(GridPagerPamater<GRIDPAMATER> searchParam);
+        GridPager<T> GetPager(GridPagerPamater<SEARCHPAMATER> searchParam);
     }
 }
