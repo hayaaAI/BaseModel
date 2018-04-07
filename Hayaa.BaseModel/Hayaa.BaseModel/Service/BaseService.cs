@@ -25,9 +25,21 @@ namespace Hayaa.BaseModel.Service
         /// <returns></returns>
         FunctionOpenResult<bool> DeleteByID(List<int> idList);
         /// <summary>
+        /// 根据主键获取数据
+        /// </summary>
+        /// <param name="Id">主键</param>
+        /// <returns></returns>
+        FunctionResult<T> Get(int Id);
+        /// <summary>
+        /// 根据参数获取列表
+        /// </summary>
+        /// <param name="pamater">参数类</param>
+        /// <returns></returns>
+        FunctionListResult<T> GetList(SEARCHPAMATER pamater);
+        /// <summary>
         /// 分页获取
         /// </summary>
-        /// <param name="searchParam"></param>
+        /// <param name="searchParam">分页参数</param>
         /// <returns></returns>
         GridPager<T> GetPager(GridPagerPamater<SEARCHPAMATER> searchParam);
     }
