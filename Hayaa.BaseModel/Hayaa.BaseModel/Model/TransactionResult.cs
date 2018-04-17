@@ -7,6 +7,7 @@ namespace Hayaa.BaseModel.Model
     /// <summary>
     /// 传输结果容器
     /// </summary>
+    [Serializable]
     public class TransactionResult<T>
     {
         /// <summary>
