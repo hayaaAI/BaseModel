@@ -14,6 +14,10 @@ namespace Hayaa.Common
         {
             return JsonConvert.SerializeObject(data);
         }
+        public static String SerializeObject(Object data)
+        {
+            return JsonConvert.SerializeObject(data);
+        }
         public static String SerlaizeSafe<T>(T data)
         {
             String r = null;
@@ -28,6 +32,11 @@ namespace Hayaa.Common
         {
             return JsonConvert.DeserializeObject<T>(data);
           
+        }
+        public static Object DeserializeObject(String data)
+        {
+            return JsonConvert.DeserializeObject(data);
+
         }
         public static T DeserializeSafe<T>(String data)
         {
