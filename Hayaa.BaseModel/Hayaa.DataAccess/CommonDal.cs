@@ -39,7 +39,7 @@ namespace Hayaa.DataAccess
         protected static T Get<T>(String conectionString, string sql, object parama)
         {
             IDbConnection conn = new MySqlConnection(conectionString);
-            return conn.QuerySingle<T>(sql, parama);
+            return conn.QuerySingleOrDefault<T>(sql, parama);
         }
         protected static GridPager<T> GetGridPager<T>(String conectionString, string sql, int pageSize, int pageIndex, object parama) where T : BaseData
         {
