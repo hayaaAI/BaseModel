@@ -38,10 +38,6 @@ namespace Hayaa.DataAccess
             if (list!=null)
             {
                 var result= list.AsList<T>();
-                if (result.Count == 0)
-                {
-                    return null;
-                }
                 return result;
             }
             return null;
