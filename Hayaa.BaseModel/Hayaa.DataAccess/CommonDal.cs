@@ -37,7 +37,12 @@ namespace Hayaa.DataAccess
             var list = conn.Query<T>(sql, parama);
             if (list!=null)
             {
-                return list.AsList<T>();
+                var result= list.AsList<T>();
+                if (result.Count == 0)
+                {
+                    return null;
+                }
+                return result;
             }
             return null;
         }
