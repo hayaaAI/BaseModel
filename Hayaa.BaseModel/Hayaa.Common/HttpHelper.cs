@@ -23,7 +23,7 @@ namespace Hayaa.Common
                 requestUrl = string.Format("http://{0}", requestUrl);
             HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(requestUrl);
             Encoding encoding = Encoding.UTF8;
-            StringBuilder param = new StringBuilder("&");
+            StringBuilder param = new StringBuilder("");
             if (urlParam != null)
             {
                 foreach (var kv in urlParam)
