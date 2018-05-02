@@ -34,12 +34,18 @@ namespace Hayaa.DataAccess
         protected static List<T> GetList<T>(String conectionString, string sql, object parama)
         {
             IDbConnection conn = new MySqlConnection(conectionString);
-            return conn.Query<T>(sql, parama).AsList<T>();
+            var list = conn.Query<T>(sql, parama);
+            if (list!=null)
+            {
+                var result= list.AsList<T>();
+                return result;
+            }
+            return null;
         }
         protected static T Get<T>(String conectionString, string sql, object parama)
         {
             IDbConnection conn = new MySqlConnection(conectionString);
-            return conn.QuerySingle<T>(sql, parama);
+            return conn.QuerySingleOrDefault<T>(sql, parama);
         }
         protected static GridPager<T> GetGridPager<T>(String conectionString, string sql, int pageSize, int pageIndex, object parama) where T : BaseData
         {

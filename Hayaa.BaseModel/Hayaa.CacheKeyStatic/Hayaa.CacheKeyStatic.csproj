@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.0.0.1</Version>
+    <Authors>HayaaAI</Authors>
+    <Product>HayaaAI</Product>
+    <Company>Hayaa</Company>
+    <Description>Redis缓存key静态字符串集合</Description>
+    <Copyright>©2018 HayaaAI</Copyright>
+    <PackageLicenseUrl>http://l.xieqj.net/license/hayaaai.txt</PackageLicenseUrl>
+    <PackageIconUrl>http://r.xieqj.net/r/ico/hayaaia.ico</PackageIconUrl>
+    <PackageTags>CacheKeyStatic</PackageTags>
+  </PropertyGroup>
+
+</Project>

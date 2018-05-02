@@ -17,13 +17,13 @@ namespace Hayaa.Common
         /// <param name="method">方法类型:post、get</param>
         /// <param name="contentType">contentType类型</param>
         /// <returns></returns>
-        public static string HttpRequest(string requestUrl, Dictionary<string, string> urlParam, string method = "post", string contentType = "application/x-www-form-urlencoded")
+        public static string Transaction(string requestUrl, Dictionary<string, string> urlParam, string method = "post", string contentType = "application/x-www-form-urlencoded")
         {
             if (!requestUrl.Contains("http"))
                 requestUrl = string.Format("http://{0}", requestUrl);
             HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(requestUrl);
             Encoding encoding = Encoding.UTF8;
-            StringBuilder param = new StringBuilder("&");
+            StringBuilder param = new StringBuilder("");
             if (urlParam != null)
             {
                 foreach (var kv in urlParam)
@@ -57,10 +57,10 @@ namespace Hayaa.Common
         /// <param name="JSONData"></param>
         /// <param name="Url"></param>
         /// <returns></returns>
-        public static string PostJson(string JSONData, string Url,int timeout=60000)
+        public static string TransactionByJson(string requestUrl, string jsonParameter,  int timeout=60000)
         {
-            byte[] bytes = Encoding.UTF8.GetBytes(JSONData);
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
+            byte[] bytes = Encoding.UTF8.GetBytes(jsonParameter);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(requestUrl);
             request.Method = "POST";
             request.ContentLength = bytes.Length;
             request.ContentType = "application/json; charset=utf-8";
