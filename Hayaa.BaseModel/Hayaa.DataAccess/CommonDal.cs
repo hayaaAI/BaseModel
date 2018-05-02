@@ -34,12 +34,12 @@ namespace Hayaa.DataAccess
         protected static List<T> GetList<T>(String conectionString, string sql, object parama)
         {
             IDbConnection conn = new MySqlConnection(conectionString);
-            List<T> result = conn.Query<T>(sql, parama).AsList<T>();
-            if ((result != null)&&(result.Count==0))
+            var list = conn.Query<T>(sql, parama);
+            if (list!=null)
             {
-                result = null;
+                return list.AsList<T>();
             }
-            return result;
+            return null;
         }
         protected static T Get<T>(String conectionString, string sql, object parama)
         {
