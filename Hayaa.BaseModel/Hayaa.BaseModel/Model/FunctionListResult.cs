@@ -27,7 +27,7 @@ namespace Hayaa.BaseModel
             set
             {
                 g_data = value;
-                if ((g_data!= null) || (g_data.Count>0))
+                if ((g_data!= null) && (g_data.Count>0))
                 {
                     this.HavingData = true;
                 }
