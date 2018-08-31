@@ -16,14 +16,14 @@ namespace Hayaa.Common
             ContractResolver = new CamelCasePropertyNamesContractResolver(),
             Formatting = Formatting.Indented
         };       
-        public static String SerializeObject<T>(T data, bool small = false) where T : class
+        public static String SerializeObject<T>(T data, bool small = true) where T : class
         {
             if (small)
                 return JsonConvert.SerializeObject(data, settings);
             else
                 return JsonConvert.SerializeObject(data);
         }
-        public static String SerlaizeSafe<T>(T data, bool small = false) where T : class
+        public static String SerlaizeSafe<T>(T data, bool small = true) where T : class
         {
             String r = null;
             try
@@ -36,28 +36,28 @@ namespace Hayaa.Common
             catch { }
             return r;
         }
-        public static T Deserialize<T>(String jsonData, bool small = false) where T : class
+        public static T Deserialize<T>(String jsonData, bool small = true) where T : class
         {
             if (small)
                 return JsonConvert.DeserializeObject<T>(jsonData, settings);
             else
                 return JsonConvert.DeserializeObject<T>(jsonData);
         }
-        public static T Deserialize<T>(String jsonData, Type type, bool small = false) where T:class
+        public static T Deserialize<T>(String jsonData, Type type, bool small = true) where T:class
         {
             if (small)
                 return (T)JsonConvert.DeserializeObject(jsonData, type, settings);
             else
                 return (T)JsonConvert.DeserializeObject(jsonData, type);
         }
-        public static Object DeserializeObject(String jsonData, Type type, bool small = false)
+        public static Object DeserializeObject(String jsonData, Type type, bool small = true)
         {
             if (small)
                 return JsonConvert.DeserializeObject(jsonData, type, settings);
             else
                 return JsonConvert.DeserializeObject(jsonData, type);
         }
-        public static T DeserializeSafe<T>(String data, bool small = false) where T : class
+        public static T DeserializeSafe<T>(String data, bool small = true) where T : class
         {
             T r = default(T);
             try
