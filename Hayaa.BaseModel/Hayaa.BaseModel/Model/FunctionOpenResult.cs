@@ -4,6 +4,7 @@ namespace Hayaa.BaseModel
 {
     /// <summary>
     /// 函数执行结果容器
+    /// 跨模块方法使用此容器，耦合强的类之间不使用
     /// </summary>
     /// <typeparam name="T">开放数据类型</typeparam>
     [Serializable]

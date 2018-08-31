@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,40 +11,58 @@ namespace Hayaa.Common
     /// </summary>
     public class JsonHelper
     {
-        public static String Serlaize<T>(T data)
+        private static JsonSerializerSettings settings = new JsonSerializerSettings()
         {
-            return JsonConvert.SerializeObject(data);
-        }
-        public static String SerializeObject(Object data)
+            ContractResolver = new CamelCasePropertyNamesContractResolver(),
+            Formatting = Formatting.Indented
+        };       
+        public static String SerializeObject<T>(T data, bool small = false) where T : class
         {
-            return JsonConvert.SerializeObject(data);
+            if (small)
+                return JsonConvert.SerializeObject(data, settings);
+            else
+                return JsonConvert.SerializeObject(data);
         }
-        public static String SerlaizeSafe<T>(T data)
+        public static String SerlaizeSafe<T>(T data, bool small = false) where T : class
         {
             String r = null;
             try
             {
-                r = JsonConvert.SerializeObject(data);
+                if (small)
+                    r = JsonConvert.SerializeObject(data, settings);
+                else
+                    r = JsonConvert.SerializeObject(data);
             }
             catch { }
             return r;
         }
-        public static T Deserialize<T>(String data)
+        public static T Deserialize<T>(String jsonData, bool small = false) where T : class
         {
-            return JsonConvert.DeserializeObject<T>(data);
-          
+            if (small)
+                return JsonConvert.DeserializeObject<T>(jsonData, settings);
+            else
+                return JsonConvert.DeserializeObject<T>(jsonData);
         }
-        public static Object DeserializeObject(String data)
+        public static T Deserialize<T>(String jsonData, Type type, bool small = false) where T:class
         {
-            return JsonConvert.DeserializeObject(data);
-
+            if (small)
+                return (T)JsonConvert.DeserializeObject(jsonData, type, settings);
+            else
+                return (T)JsonConvert.DeserializeObject(jsonData, type);
         }
-        public static T DeserializeSafe<T>(String data)
+        public static Object DeserializeObject(String jsonData, Type type, bool small = false)
+        {
+            if (small)
+                return JsonConvert.DeserializeObject(jsonData, type, settings);
+            else
+                return JsonConvert.DeserializeObject(jsonData, type);
+        }
+        public static T DeserializeSafe<T>(String data, bool small = false) where T : class
         {
             T r = default(T);
             try
             {
-                r = JsonConvert.DeserializeObject<T>(data);
+                r = Deserialize<T>(data, small);
             }
             catch
             {
