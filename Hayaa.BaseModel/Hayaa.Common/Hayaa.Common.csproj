@@ -12,7 +12,7 @@
     <PackageProjectUrl>https://github.com/hayaaAI/BaseModel</PackageProjectUrl>
     <PackageIconUrl>http://r.xieqj.net/r/ico/hayaaia.ico</PackageIconUrl>
     <Description>工具方法组件</Description>
-    <Version>1.0.0.8</Version>
+    <Version>1.0.0.9</Version>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
