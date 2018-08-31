@@ -12,8 +12,9 @@ namespace Hayaa.Common
     public class JsonHelper
     {
         private static JsonSerializerSettings settings = new JsonSerializerSettings()
-        {
-             DateFormatHandling=DateFormatHandling.MicrosoftDateFormat,
+        {            
+             DateTimeZoneHandling=DateTimeZoneHandling.Utc,
+            DateFormatHandling = DateFormatHandling.IsoDateFormat,
             ContractResolver = new CamelCasePropertyNamesContractResolver(),
             Formatting = Formatting.Indented
         };       
