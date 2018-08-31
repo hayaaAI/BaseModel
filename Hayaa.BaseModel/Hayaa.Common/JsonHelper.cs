@@ -13,6 +13,7 @@ namespace Hayaa.Common
     {
         private static JsonSerializerSettings settings = new JsonSerializerSettings()
         {
+             DateFormatHandling=DateFormatHandling.MicrosoftDateFormat,
             ContractResolver = new CamelCasePropertyNamesContractResolver(),
             Formatting = Formatting.Indented
         };       
