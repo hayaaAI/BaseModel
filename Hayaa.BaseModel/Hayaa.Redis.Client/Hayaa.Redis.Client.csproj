@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>Hayaa.Redis.ClientV2</PackageId>
+    <Authors>HayaaAI</Authors>
+    <Product>HayaaAI</Product>
+    <Company>HayaaAI</Company>
+    <Description>Redis缓存客户端插件V2版本</Description>
+    <Copyright>©2018 HayaaAI</Copyright>
+    <PackageLicenseUrl>http://l.xieqj.net/license/hayaaai.txt</PackageLicenseUrl>
+    <PackageIconUrl>http://r.xieqj.net/r/ico/hayaaia.ico</PackageIconUrl>
+    <PackageTags>RedisClient</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hayaa.Common" Version="1.0.0.9" />
+    <PackageReference Include="StackExchange.Redis" Version="2.0.495" />
+  </ItemGroup>
+
+</Project>
