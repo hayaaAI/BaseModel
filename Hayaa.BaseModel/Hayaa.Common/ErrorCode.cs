@@ -17,5 +17,9 @@ namespace Hayaa.Common
         /// 密码破解攻击
         /// </summary>
         public const int PwdAttack = 1002;
+        /// <summary>
+        /// 无授权
+        /// </summary>
+        public const int NoPermission = 1003;
     }
 }
