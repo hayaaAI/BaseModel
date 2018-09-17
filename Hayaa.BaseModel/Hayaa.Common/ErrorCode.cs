@@ -21,5 +21,9 @@ namespace Hayaa.Common
         /// 无授权
         /// </summary>
         public const int NoPermission = 1003;
+        /// <summary>
+        /// 无数据
+        /// </summary>
+        public const int NoData = 1004;
     }
 }
