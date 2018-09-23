@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>hayaaAI</groupId>
+    <artifactId>hayaa.base</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+    <modules>
+        <module>hayaa.basemodel</module>
+        <module>hayaa.common</module>
+        <module>hayaa.dataaccess</module>
+        <module>hayaa.redisclient</module>
+        <module>hayaa.cachekey.static</module>
+        <module>hayaa.webcommon</module>
+    </modules>
+    <repositories>
+        <repository>
+            <id>hayaa-group</id>
+            <url>http://nexus.xieqj.net/repository/hayaa-group/</url>
+        </repository>
+    </repositories>
+    <distributionManagement>
+        <repository>
+            <id>hayaa-releases</id>
+            <url>http://nexus.xieqj.net/repository/hayaa-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>hayaa-snapshots</id>
+            <url>http://nexus.xieqj.net/repository/hayaa-snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+</project>

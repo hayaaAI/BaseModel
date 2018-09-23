@@ -1,0 +1,25 @@
+{
+  "appConfigId": 1,
+  "solutionID": "600e4dcf-f426-4624-ab4f-4f55e81bbaf5",
+  "solutionName": "单元测试配置",
+  "configContent": null,
+  "version": 1,
+  "components": [
+	{
+      "componentConfigId": 1,
+      "componentId": 10004,
+      "content": "{\"appSettings\":null,\"connectionStrings\":null,\"redisConfigs\":[{\"name\":\"default\",\"hostName\":\"192.168.31.65\",\"port\":10004,\"serverPwd\":\"\"}],\"code\":0,\"message\":null,\"createTime\":\"0001-01-01T00:00:00\",\"updateTime\":\"0001-01-01T00:00:00\"}",
+      "version": 1,
+      "componentConfigTitle": "配置组件",
+      "isDefault": true,
+      "code": 0,
+      "message": null,
+      "createTime": "0001-01-01T00:00:00",
+      "updateTime": "0001-01-01T00:00:00"
+    }
+  ],
+  "code": 0,
+  "message": null,
+  "createTime": "0001-01-01T00:00:00",
+  "updateTime": "0001-01-01T00:00:00"
+}

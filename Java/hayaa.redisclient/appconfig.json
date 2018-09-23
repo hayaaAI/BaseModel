@@ -1,0 +1,13 @@
+{
+  "seedServerUrl": "#",
+  "localConfigDirectoryPath": "config",
+  "virtualPath": true,
+  "securityToken": "",
+  "appID": "1",
+  "appInstanceID": 0,
+  "appConfigSolutionID": "600e4dcf-f426-4624-ab4f-4f55e81bbaf5",
+  "appConfigFileName": "app.json",
+  "version": 1,
+  "remote": false,
+  "remoteConfigRoot": true
+}
