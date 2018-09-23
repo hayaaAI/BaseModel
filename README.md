@@ -1,2 +1,2 @@
-# BaseModel
- C#版本基础类库 
+# BaseLib
+ 多语言版本基础类库 
