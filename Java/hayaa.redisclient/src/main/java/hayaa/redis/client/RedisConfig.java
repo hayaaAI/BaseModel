@@ -1,10 +1,8 @@
 package hayaa.redis.client;
 
-import hayaa.basemodel.model.BaseData;
-
 import java.io.Serializable;
 
-class RedisConfig extends BaseData implements Serializable  {
+class RedisConfig   implements Serializable  {
     private String name;
     private String hostName;
     private int port;
